@@ -9,7 +9,7 @@ import android.widget.Button;
 import id.onestep.hydron.R;
 
 public class Login extends AppCompatActivity {
-    private Button login;
+    private Button login, signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,14 @@ public class Login extends AppCompatActivity {
                 Intent i = new Intent(Login.this, MainActivity.class);
                 startActivity(i);
                 finish();
+            }
+        });
+        signup = (Button) findViewById(R.id.btnSignUp);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(Login.this,SignUp.class);
+                startActivity(i);
             }
         });
     }
