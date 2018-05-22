@@ -1,6 +1,7 @@
 package id.onestep.hydron.View;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -12,9 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import id.onestep.hydron.Adapter.home_adapter;
 import id.onestep.hydron.Adapter.schedule_adapter;
-import id.onestep.hydron.Model.m_home;
 import id.onestep.hydron.Model.m_schedule;
 import id.onestep.hydron.R;
 
@@ -48,6 +47,13 @@ public class ScheduleFragment extends Fragment {
         adapter = new schedule_adapter(getActivity(),mList);
         listView.setAdapter(adapter);
         fab = (FloatingActionButton) view.findViewById(R.id.fabschedule);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), AddSchedule.class);
+                startActivity(i);
+            }
+        });
         return view;
     }
 

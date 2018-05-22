@@ -19,7 +19,8 @@
         <activity android:name=".View.Login" />
         <activity android:name=".View.MainActivity" />
         <activity android:name=".View.SignUp" />
-        <activity android:name=".View.SplashScreen"></activity>
+        <activity android:name=".View.SplashScreen" />
+        <activity android:name=".View.AddSchedule"></activity>
     </application>
 
 </manifest>

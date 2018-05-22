@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="125dp"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:orientation="horizontal"
@@ -15,59 +15,46 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="5dp">
-
+            android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/cardImage"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="#abcb89" />
+                android:id="@+id/scheduleLine"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="#d2ea9b" />
 
             <TextView
-                android:id="@+id/cardTitle"
-                android:layout_width="match_parent"
+                android:id="@+id/simulateTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cardImage"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/font_roboto"
-                android:text="Hidroponik : Blablablab"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/scheduleLine"
+                android:textSize="30dp"
+                android:fontFamily="@font/font_nunitoextra"
+                android:textColor="#abcb89"
+                android:text="Sawi" />
+            <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/scheduleLine"
+                android:layout_below="@id/simulateTitle"
+                android:text="Harga : Rp. "
+                android:layout_marginLeft="10dp"
+                android:textSize="17.5dp"
                 android:textColor="#333333"
-                android:textSize="17.5dp" />
-
+                android:fontFamily="@font/font_roboto"/>
             <TextView
-                android:id="@+id/cardUrl"
-                android:layout_width="match_parent"
+                android:id="@+id/simulatePrice"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cardTitle"
-                android:fontFamily="@font/font_roboto"
-                android:text="www.google.com"
-                android:textColor="#AAA"
-                android:textSize="12.5dp" />
-
-            <TextView
-                android:id="@+id/cardViews"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cardUrl"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/font_roboto"
-                android:text="130 views"
+                android:layout_toRightOf="@id/textPrice"
+                android:layout_below="@id/simulateTitle"
+                android:text="0"
+                android:layout_marginLeft="5dp"
+                android:textSize="17.5dp"
                 android:textColor="#333333"
-                android:textSize="15dp" />
-
-            <TextView
-                android:id="@+id/cardDesc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cardViews"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/font_roboto"
-                android:text="Hidroponik : Blablablabsadasdasdasdasdasd
-sadljlaksjd dasasdasdasd
-asdasdasdasdsadasd"
-                android:textColor="#333333"
-                android:textSize="15dp" />
+                android:fontFamily="@font/font_roboto"/>
         </RelativeLayout>
 
 

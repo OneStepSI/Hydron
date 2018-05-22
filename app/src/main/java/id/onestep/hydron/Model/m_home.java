@@ -1,16 +1,13 @@
 package id.onestep.hydron.Model;
 
 public class m_home {
-    private int id, cardImage;
-    private String cardTitle, cardUrl, cardViews, cardDesc;
+    private int id;
+    private String simulateTitle, simulatePrice;
 
-    public m_home(int id, int cardImage, String cardTitle, String cardUrl, String cardViews, String cardDesc) {
+    public m_home(int id, String simulateTitle, String simulatePrice) {
         this.id = id;
-        this.cardImage = cardImage;
-        this.cardTitle = cardTitle;
-        this.cardUrl = cardUrl;
-        this.cardViews = cardViews;
-        this.cardDesc = cardDesc;
+        this.simulateTitle = simulateTitle;
+        this.simulatePrice = simulatePrice;
     }
 
     public int getId() {
@@ -21,43 +18,19 @@ public class m_home {
         this.id = id;
     }
 
-    public int getCardImage() {
-        return cardImage;
+    public String getSimulateTitle() {
+        return simulateTitle;
     }
 
-    public void setCardImage(int cardImage) {
-        this.cardImage = cardImage;
+    public void setSimulateTitle(String simulateTitle) {
+        this.simulateTitle = simulateTitle;
     }
 
-    public String getCardTitle() {
-        return cardTitle;
+    public String getSimulatePrice() {
+        return simulatePrice;
     }
 
-    public void setCardTitle(String cardTitle) {
-        this.cardTitle = cardTitle;
-    }
-
-    public String getCardUrl() {
-        return cardUrl;
-    }
-
-    public void setCardUrl(String cardUrl) {
-        this.cardUrl = cardUrl;
-    }
-
-    public String getCardViews() {
-        return cardViews;
-    }
-
-    public void setCardViews(String cardViews) {
-        this.cardViews = cardViews;
-    }
-
-    public String getCardDesc() {
-        return cardDesc;
-    }
-
-    public void setCardDesc(String cardDesc) {
-        this.cardDesc = cardDesc;
+    public void setSimulatePrice(String simulatePrice) {
+        this.simulatePrice = simulatePrice;
     }
 }

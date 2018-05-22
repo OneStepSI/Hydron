@@ -44,16 +44,10 @@ public class home_adapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = View.inflate(activity, R.layout.list_home,null);
         m_home m = list.get(position);
-        ImageView cardImage = (ImageView) view.findViewById(R.id.cardImage);
-        cardImage.setImageResource(m.getCardImage());
-        TextView cardTitle = (TextView) view.findViewById(R.id.cardTitle);
-        cardTitle.setText(m.getCardTitle());
-        TextView cardUrl = (TextView) view.findViewById(R.id.cardUrl);
-        cardUrl.setText(m.getCardUrl());
-        TextView cardViews = (TextView) view.findViewById(R.id.cardViews);
-        cardViews.setText(m.getCardViews());
-        TextView cardDesc = (TextView) view.findViewById(R.id.cardDesc);
-        cardDesc.setText(m.getCardDesc());
+        TextView simulateTitle = (TextView) view.findViewById(R.id.simulateTitle);
+        simulateTitle.setText(m.getSimulateTitle());
+        TextView simulatePrice = (TextView) view.findViewById(R.id.simulatePrice);
+        simulatePrice.setText(m.getSimulatePrice());
         view.setTag(m.getId());
         return view;
     }

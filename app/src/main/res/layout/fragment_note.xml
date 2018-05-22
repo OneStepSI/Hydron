@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.NoteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#ABCB89">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circle" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/circle" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/circle" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/circle" />
+
+            <TextView
+                android:id="@+id/keuntungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/font_nunitoextra"
+                android:text="Keuntungan"
+                android:textColor="#FFF"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/uang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keuntungan"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/font_roboto"
+                android:text="Rp. 300.000"
+                android:textColor="#FFF"
+                android:textSize="25dp" />
+        </RelativeLayout>
+
+        <com.xyz.step.FlowViewVertical
+            android:id="@+id/vflow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            app:v_bgPositionX="40dp"
+            app:v_bg_color="#ABCB89"
+            app:v_bg_radius="12dp"
+            app:v_bg_width="8dp"
+            app:v_interval="80dp"
+            app:v_max_step="4"
+            app:v_pro_color="#ABCB89"
+            app:v_pro_radius="8dp"
+            app:v_pro_width="4dp"
+            app:v_textMoveTop="7dp"
+            app:v_textsize="15dp" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabschedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_black_24dp" />
+
+
+</android.support.design.widget.CoordinatorLayout>

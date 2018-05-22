@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    tools:context=".View.Index">
+    tools:context=".View.Index"
+    android:background="#FFF">
 
     <RelativeLayout
         android:layout_width="wrap_content"

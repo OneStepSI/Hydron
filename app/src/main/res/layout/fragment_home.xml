@@ -1,26 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
+    android:orientation="vertical"
     tools:context=".View.HomeFragment">
 
-    <RelativeLayout
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="20dp">
 
-        <ListView
-            android:id="@+id/list_home"
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:divider="#FFF"
-            android:dividerHeight="10dp">
+            android:hint="Masukkan Modal" />
 
-        </ListView>
-    </RelativeLayout>
+    </android.support.design.widget.TextInputLayout>
 
+    <Button
+        android:id="@+id/btnSimulate"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/green_button"
+        android:text="SIMULATE"
+        android:textColor="#FFF" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/list_simulate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:divider="#FFF"
+        android:dividerHeight="10dp">
+
+    </ListView>
+
+</LinearLayout>

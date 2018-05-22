@@ -14,13 +14,12 @@ import android.widget.Button;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import id.onestep.hydron.R;
-import id.onestep.hydron.View.HomeFragment;
-import id.onestep.hydron.View.ScheduleFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar toolbar;
     private MaterialSearchView searchView;
     private Button title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +29,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         searchView = (MaterialSearchView) findViewById(R.id.searchView);
         searchView.setVoiceSearch(true);
         title = (Button) findViewById(R.id.titleMain);
-        title.setText("HOME");
-        HomeFragment homeFragment = new HomeFragment();
+        title.setText("SCHEDULE");
+        ScheduleFragment scheduleFragment = new ScheduleFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment, homeFragment);
+        fragmentTransaction.replace(R.id.fragment, scheduleFragment);
         fragmentTransaction.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -83,17 +82,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.beranda){
-            title.setText("HOME");
-            HomeFragment homeFragment = new HomeFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment, homeFragment);
-            fragmentTransaction.commit();
-        } else if (id == R.id.schedule){
+        if (id == R.id.schedule) {
             title.setText("SCHEDULE");
             ScheduleFragment scheduleFragment = new ScheduleFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment, scheduleFragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.simulation) {
+            title.setText("SIMULATION");
+            HomeFragment homeFragment = new HomeFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment, homeFragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.note) {
+            title.setText("NOTE");
+            NoteFragment noteFragment = new NoteFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment, noteFragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.shop) {
+            title.setText("HYMART");
+            ShopFragment shopFragment = new ShopFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment, shopFragment);
             fragmentTransaction.commit();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
